@@ -8,10 +8,13 @@ import Teams from "./Pages/Teams";
 export default function Body() {
   return (
     <Switch>
-      <Route path="/" exact component={LandingPage} />
-      <Route path="/events" component={Events} />
-      <Route path="/team" component={Teams} />
-      <Route path="/contact" component={Contacts} />
+      <div className="pages">
+        <Route path="/" exact component={LandingPage} />
+        <Route path="/events" component={Events} />
+        <Route path="/team" component={Teams} />
+        <Route path="/contact" component={Contacts} />
+      </div>
+
     </Switch>
   );
 }
