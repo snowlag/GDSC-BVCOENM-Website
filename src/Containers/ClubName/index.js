@@ -11,15 +11,13 @@ export default function index() {
             <Grid container spacing={2}>
                 <Grid className="content-header-parent-left" item xs={6}>
                     <div className="content-header-parent-left-name">
-                        <Paper elevation={2}>
-                            <Typography variant="h3" gutterBottom component="div">
+                       
+                        <Typography variant="h3" gutterBottom component="div" color="white">
                                 Google Developer Student Club
                             </Typography>
-                            <Typography variant="h3" gutterBottom component="div">
+                            <Typography variant="h3" gutterBottom component="div" color="white">
                                 BVCOENM
                             </Typography>
-                        </Paper>
-
                     </div>
 
 
