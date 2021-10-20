@@ -11,7 +11,7 @@ export default function Body() {
       <div className="pages">
         <Route path="/" exact component={LandingPage} />
         <Route path="/events" component={Events} />
-        <Route path="/team" component={Teams} />
+        <Route path="/teams" component={Teams} />
         <Route path="/contact" component={Contacts} />
       </div>
 
