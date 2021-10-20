@@ -57,20 +57,20 @@ export default function EventCard(props) {
                         <Typography gutterBottom variant="h5" component="div" color="white">
                             {name}
                         </Typography>
-                        <Typography variant="body2" color="text.secondary" color="white">
+                        <Typography variant="body2" color="text.secondary" color="darkgrey">
                             {description}
                         </Typography>
-                        <Typography variant="body2" color="text.secondary" color="white" >
+                        <Typography variant="body2" color="text.secondary" color="darkgrey" >
                             Date: {startDate} - {endDate} {year}
                         </Typography>
-                        <Typography variant="body2" color="text.secondary" color="white">
+                        <Typography variant="body2" color="text.secondary" color="darkgrey">
                             Time: {startTime} - {endTime}
                         </Typography>
                     </CardContent>
                     <CardActions>
                         <div className="darkDiv">
                             {!isCompleted && <Button color="success" onClick={() => window.open(registerLink, "_blank")} size="small">Register</Button>}
-                            <Button color="success" onClick={() => window.open(registerLink, "_blank")} size="small">Learn More</Button>
+                            <Button color="primary" onClick={() => window.open(registerLink, "_blank")} size="small">Learn More</Button>
                             {hasVideo && <Button variant="outlined" color="error" onClick={handleOpen} size="small">Watch</Button>}
                         </div>
                     </CardActions>
