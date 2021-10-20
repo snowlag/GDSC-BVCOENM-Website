@@ -35,15 +35,16 @@ export default function EventCard(props) {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        bgcolor: 'background.paper',
+        backgroundColor:"#2a2a2a",
         boxShadow: 24,
+
         p: 2,
     };
 
     console.log(props)
     return (
         <>
-            <Card className="eventCard" sx={{ maxWidth: 345 }}>
+            <Card style={{ "border-radius": "15px 50px 30px 5px", "background-color": "#2d2d2d" }} className="eventCard " sx={{ maxWidth: 345 }}>
                 <div className="darkDiv">
                     <CardMedia
                         component="img"
@@ -68,9 +69,9 @@ export default function EventCard(props) {
                     </CardContent>
                     <CardActions>
                         <div className="darkDiv">
-                            {!isCompleted && <Button onClick={() => window.open(registerLink, "_blank")} size="small">Register</Button>}
-                            <Button onClick={() => window.open(registerLink, "_blank")} size="small">Learn More</Button>
-                            {hasVideo && <Button onClick={handleOpen} size="small">Watch</Button>}
+                            {!isCompleted && <Button color="success" onClick={() => window.open(registerLink, "_blank")} size="small">Register</Button>}
+                            <Button color="success" onClick={() => window.open(registerLink, "_blank")} size="small">Learn More</Button>
+                            {hasVideo && <Button variant="outlined" color="error" onClick={handleOpen} size="small">Watch</Button>}
                         </div>
                     </CardActions>
                 </div>
@@ -83,22 +84,26 @@ export default function EventCard(props) {
                 aria-describedby="modal-modal-description"
             >
                 <Box sx={style}>
-                    <iframe
-                        width="1140"
-                        height="641"
-                        src={`https://www.youtube.com/embed/${youtubeLinkId}`}
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                    <div className="watch-model">
+                        <iframe
+                            width="1140"
+                            height="641"
+                            src={`https://www.youtube.com/embed/${youtubeLinkId}`}
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
 
-                    <Typography gutterBottom variant="h5" component="div">
-                        {name}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        {description}
-                    </Typography>
+                        <Typography color="white" gutterBottom variant="h5" component="div">
+                            {name}
+                        </Typography>
+                        <Typography  color="gray" variant="body2" >
+                            {description}
+                        </Typography>
+                    </div>
                 </Box>
+
+
             </Modal>
         </>
     );
