@@ -11,13 +11,13 @@ export default function index() {
             <Grid container spacing={2}>
                 <Grid className="content-header-parent-left" item xs={6}>
                     <div className="content-header-parent-left-name">
-                       
-                        <Typography variant="h3" gutterBottom component="div" color="white">
-                                Google Developer Student Club
-                            </Typography>
-                            <Typography variant="h3" gutterBottom component="div" color="white">
-                                BVCOENM
-                            </Typography>
+                        <img height="200px" width="200px" src="/logo.svg" alt="Image" />
+                        <Typography variant="h5" gutterBottom component="div" color="white">
+                            Google Developer Student Clubs
+                        </Typography>
+                        <Typography variant="h5" gutterBottom component="div" color="gray">
+                            BVCOENM
+                        </Typography>
                     </div>
 
 
