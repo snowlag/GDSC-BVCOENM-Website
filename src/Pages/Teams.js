@@ -8,7 +8,7 @@ import {lead} from "../mock/lead"
 export default function Teams() {
     console.log(lead)
     return (
-        <div className="container">
+        <div className="container teams-page">
             <div className="head1"><h1 class="display-4 font-weight-bold mb-4" style={{fontWeight: 10}}>Our Team</h1></div>
             <div className="container">
                <TeamLead Lead={lead} />

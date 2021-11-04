@@ -7,6 +7,10 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import InfoIcon from '@mui/icons-material/Info';
+import HowToRegIcon from '@mui/icons-material/HowToReg';
 import "./style.css"
 
 
@@ -72,10 +76,12 @@ export default function EventCard(props) {
                                 <Typography variant="h5" gutterBottom color="gray" component="div">
                                     Event Time :{startTime} -  {endTime}
                                 </Typography>
+                                <Stack direction="row" spacing={2}>
+                                    {!isCompleted && <Button startIcon={<HowToRegIcon />}  color="success" variant="outlined" onClick={() => window.open(registerLink, "_blank")} size="large">Register</Button>}
+                                    <Button color="primary" startIcon={<InfoIcon />} variant="outlined" onClick={() => window.open(registerLink, "_blank")} size="large">Learn More</Button>
+                                    {hasVideo && <Button startIcon={<YouTubeIcon />} size="large" variant="outlined" color="error" onClick={handleOpen}>Watch</Button>}
+                                </Stack>
 
-                                {!isCompleted && <Button color="success" onClick={() => window.open(registerLink, "_blank")} size="large">Register</Button>}
-                                <Button color="primary" onClick={() => window.open(registerLink, "_blank")} size="large">Learn More</Button>
-                                {hasVideo && <Button size="large" variant="outlined" color="error" onClick={handleOpen}>Watch</Button>}
                             </div>
                         </div>
                     </div>
