@@ -1,9 +1,6 @@
 import * as React from 'react';
-
-import { Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faFacebookF, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons'
-
 import "./teams.css";
 export default function LeaderCard(props) {
     const {
@@ -16,8 +13,6 @@ export default function LeaderCard(props) {
         insta,
     } = props
 
-
-    console.log(props)
     return (
         <div className="container">
                 <div className="card">

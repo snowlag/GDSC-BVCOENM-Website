@@ -3,7 +3,7 @@ import * as React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faFacebookF, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons'
-
+import "./teams.css";
 export default function MemberCard(props) {
     const {
         key,
@@ -16,8 +16,6 @@ export default function MemberCard(props) {
         insta,
     } = props
 
-
-    console.log(props)
     return (
         <Col>
             <div className="content">
