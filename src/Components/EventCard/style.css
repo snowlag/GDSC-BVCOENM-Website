@@ -26,3 +26,9 @@
 .event-desc{
     color: #b0b0b0
 }
+
+.iframe-player{
+    min-width: 90vw;
+    min-height: 60vh;
+    max-height: 70vh;
+}

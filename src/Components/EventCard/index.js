@@ -99,8 +99,7 @@ export default function EventCard(props) {
                 <Box sx={style}>
                     <div className="watch-model">
                         <iframe
-                            width="1140"
-                            height="641"
+                            class="iframe-player"
                             src={`https://www.youtube.com/embed/${youtubeLinkId}`}
                             title="YouTube video player"
                             frameborder="0"
@@ -110,13 +109,8 @@ export default function EventCard(props) {
                         <Typography color="white" gutterBottom variant="h5" component="div">
                             {name}
                         </Typography>
-                        <Typography color="gray" variant="body2" >
-                            {description}
-                        </Typography>
                     </div>
                 </Box>
-
-
             </Modal>
         </>
     );
