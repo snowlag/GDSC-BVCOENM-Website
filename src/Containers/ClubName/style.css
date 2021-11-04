@@ -3,19 +3,30 @@
 }
 
 .content-header-parent-right{
-
+    text-align: center
 }
 .content-header{
 
 }
 
+.content-header-tagline{
+    margin-top: 10%;
+}
+
+.content-header-sub-tagline{
+    margin-top: 10%;
+}
+
+
 .content-header-parent-left-name{
-    padding: 30% 0;
+   margin: auto;
     text-align: center;
-    margin: auto;
     max-width: 80%;
 }
 
 .clubname-container {
     background-color: rgba(0, 0, 0, 0.507);
+}
+.content-header-image-right{
+    margin: auto auto;
 }
