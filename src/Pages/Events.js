@@ -14,7 +14,7 @@ export default function Events() {
     return (
         <div>
             <div className=" event-header center-items">
-                <div className="head1"><h1 class="display-4 font-weight-bold mb-4" style={{ fontWeight: 10 }}>Upcoming Events...</h1></div>
+                <div className="head1"><h1 class="display-4 font-weight-bold" style={{ fontWeight: 10 }}>Upcoming Events...</h1></div>
             </div>
 
             <Grid container spacing={2}>
