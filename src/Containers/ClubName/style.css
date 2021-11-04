@@ -29,4 +29,5 @@
 }
 .content-header-image-right{
     margin: auto auto;
+    max-width: 100vw;
 }
