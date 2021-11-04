@@ -36,7 +36,7 @@ export default function Events() {
             <Grid container spacing={2}>
                 {events.map(event => (
 
-                    <Grid item xs={12} sm={4} md={12} lg={12}>
+                    <Grid item xs={12} sm={12} md={12} lg={12}>
                         <EventCard
                             {...event}
                         />
