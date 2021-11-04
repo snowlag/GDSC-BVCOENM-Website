@@ -1,9 +1,28 @@
 .eventCard {
-    background-color: black;
-    color: blanchedalmond;
-    
+    background-color: rgb(0, 0, 0);
+    color: blanchedalmond; 
+    border-color: black;
+    border-radius: 15px;
+
+}
+.event-image{
+    width: 100%;
+    height: auto;
+    margin: auto auto;
+    vertical-align: center;
+    border-radius: 10%;
+}
+.poster-container{
+    padding: 3%;
+}
+.watch-model{
+    background-color:#2d2d2d;
 }
 
-.watch-model{
-    background-color: chocolate;
+.event-body{
+    color: rgb(255, 255, 255);
+}
+
+.event-desc{
+    color: #b0b0b0
 }

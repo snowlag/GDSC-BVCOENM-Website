@@ -7,6 +7,13 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import InfoIcon from '@mui/icons-material/Info';
+import HowToRegIcon from '@mui/icons-material/HowToReg';
+import "./style.css"
+
+
 export default function EventCard(props) {
     const {
         name,
@@ -35,47 +42,53 @@ export default function EventCard(props) {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        backgroundColor:"#2a2a2a",
+        backgroundColor: "#2a2a2a",
         boxShadow: 24,
-
         p: 2,
     };
+
+    const cardStyle = {
+        "border-radius": "15px 50px 30px 5px",
+        "background-color": "#2d2d2d",
+        "box-shadow": "0.1em 0.1em 0.5em #a6f616,-0.1em -0.1em 0.4em #ffffff"
+
+
+    }
 
     console.log(props)
     return (
         <>
-            <Card style={{ "border-radius": "15px 50px 30px 5px", "background-color": "#2d2d2d" }} className="eventCard " sx={{ maxWidth: 345 }}>
-                <div className="darkDiv">
-                    <CardMedia
-                        component="img"
-                        height="140"
-                        image={posterLink}
-                        alt={name}
-                    />
-                    <CardContent>
-
-                        <Typography gutterBottom variant="h5" component="div" color="white">
-                            {name}
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary" color="darkgrey">
-                            {description}
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary" color="darkgrey" >
-                            Date: {startDate} - {endDate} {year}
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary" color="darkgrey">
-                            Time: {startTime} - {endTime}
-                        </Typography>
-                    </CardContent>
-                    <CardActions>
-                        <div className="darkDiv">
-                            {!isCompleted && <Button color="success" onClick={() => window.open(registerLink, "_blank")} size="small">Register</Button>}
-                            <Button color="primary" onClick={() => window.open(registerLink, "_blank")} size="small">Learn More</Button>
-                            {hasVideo && <Button variant="outlined" color="error" onClick={handleOpen} size="small">Watch</Button>}
+            <div className="card mb-3" style={{ borderColor: 'black', backgroundColor: 'transparent' }}>
+                <div className="eventCard">
+                    <div className="row g-0">
+                        <div className="col-md-3">
+                            <div className="poster-container">
+                                <img src={posterLink} className="event-image" alt="..." />
+                            </div>
                         </div>
-                    </CardActions>
+                        <div className="col-md-9">
+                            <div className="card-body event-body">
+                                <h1 className="card-title">{name}</h1>
+                                <h4 className="card-text event-desc">{description}</h4>
+                                <Typography variant="h5" gutterBottom color="gray" component="div">
+                                    Event Date :{startDate} -  {endDate}
+                                </Typography>
+                                <Typography variant="h5" gutterBottom color="gray" component="div">
+                                    Event Time :{startTime} -  {endTime}
+                                </Typography>
+                                <Stack direction="row" spacing={2}>
+                                    {!isCompleted && <Button startIcon={<HowToRegIcon />}  color="success" variant="outlined" onClick={() => window.open(registerLink, "_blank")} size="large">Register</Button>}
+                                    <Button color="primary" startIcon={<InfoIcon />} variant="outlined" onClick={() => window.open(registerLink, "_blank")} size="large">Learn More</Button>
+                                    {hasVideo && <Button startIcon={<YouTubeIcon />} size="large" variant="outlined" color="error" onClick={handleOpen}>Watch</Button>}
+                                </Stack>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </Card>
+
+            </div>
+
 
             <Modal
                 open={open}
@@ -97,7 +110,7 @@ export default function EventCard(props) {
                         <Typography color="white" gutterBottom variant="h5" component="div">
                             {name}
                         </Typography>
-                        <Typography  color="gray" variant="body2" >
+                        <Typography color="gray" variant="body2" >
                             {description}
                         </Typography>
                     </div>

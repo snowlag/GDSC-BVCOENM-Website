@@ -36,7 +36,7 @@ export default function index() {
                     </div>
                 </Grid>
                 <Grid className="content-header-parent-right" item xs={12} md={12} lg={6}>
-                    <img height="500px" className="content-header-image-right" width="700px" src="https://dscupt.tech/_next/static/images/home-875df7ff864cdbe3f228360a1b1e263f.webp" alt="Image" />
+                    <img height="500px" className="content-header-image-right" width="700px" src="https://dscvit.com/images/landing.svg" alt="Image" />
                 </Grid>
             </Grid>
         </div>
