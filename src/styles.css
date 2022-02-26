@@ -1,6 +1,5 @@
 body {
   background-color: #000000;
-
 }
 .App {
   font-family: sans-serif;
@@ -20,16 +19,16 @@ body {
   margin-top: 20px;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 5px;
-  }
-::-webkit-scrollbar-track{
-    background-color: black;
-  }
-  
-::-webkit-scrollbar-thumb{
-    background-color: rgb(253, 253, 253);
-  }
+}
+::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(253, 253, 253);
+}
 
 a {
   color: #000;
@@ -53,40 +52,38 @@ header .nav-item.active {
 }
 
 /* Events page style */
-.events-corousal{
+.events-corousal {
   width: 100%;
   height: 100%;
 }
 
-
-.featured-events{
+.featured-events {
   min-height: 500px;
 }
 
-.events-description-container{
+.events-description-container {
   text-align: center;
 }
 
-
-.events-description{
+.events-description {
   margin: auto auto;
   text-align: center;
   margin-top: 30%;
 }
-.center-items{
+.center-items {
   align-items: center;
-  margin: auto auto
+  margin: auto auto;
 }
 
-.contact{
+.contact {
   width: 500px;
   margin: auto auto;
   text-align: left;
   margin-top: 5%;
-  padding:20px
+  padding: 20px;
 }
 
-.contact-icon{
+.contact-icon {
   margin-top: 5px;
   margin-left: 10%;
   border-radius: 15%;
@@ -94,14 +91,30 @@ header .nav-item.active {
   width: 230px;
 }
 
-.event-header{
+.event-header {
   margin-top: 30px;
 }
-.teams-page{
-  margin-top: 30px;
-}
-
-.event-page{
+.teams-page {
   margin-top: 30px;
 }
 
+.event-page {
+  margin-top: 30px;
+}
+
+@media (max-width: 420px) {
+  .contactContainer .row {
+    text-align: center;
+  }
+  .contactContainer .contact {
+    max-width: 400px;
+  }
+  .contactContainer #contactImage {
+    padding: 50px 10px;
+    max-width: 90vw;
+  }
+
+  .contactContainer .contact-icon {
+    display: none;
+  }
+}
