@@ -101,16 +101,23 @@ header .nav-item.active {
 .event-page {
   margin-top: 30px;
 }
-.container {
+.container.contactContainer {
   max-width: 100vh;
+  text-align: center;
+}
+.container.contactContainer .contact-icon {
+  padding: 0;
+  margin: 0;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 600px) {
   .contactContainer .row {
     text-align: center;
   }
   .contactContainer .contact {
-    max-width: 400px;
+    max-width: 80vw;
+    padding: 0;
+    margin: 0;
   }
   .contactContainer #contactImage {
     padding: 50px 10px;
