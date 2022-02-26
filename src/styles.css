@@ -102,7 +102,7 @@ header .nav-item.active {
   margin-top: 30px;
 }
 .container.contactContainer {
-  max-width: 100vh;
+  max-width: 100vw;
   text-align: center;
 }
 .container.contactContainer .contact-icon {
