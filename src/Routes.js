@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router";
 import Contacts from "./Pages/Contact";
 import Events from "./Pages/Events";
-import LandingPage from "./Pages/Landing"
+import LandingPage from "./Pages/Landing";
 import Teams from "./Pages/Teams";
 
 export default function Body() {
@@ -14,7 +14,6 @@ export default function Body() {
         <Route path="/teams" component={Teams} />
         <Route path="/contact" component={Contacts} />
       </div>
-
     </Switch>
   );
 }
