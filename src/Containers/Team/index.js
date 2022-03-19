@@ -3,9 +3,7 @@ import { Grid, Typography } from "@mui/material";
 import MemberCard from "../../Components/MemberCard";
 import TeamLeadCard from "../../Components/TeamLeadCard";
 import "./index.css";
-import { AnimationOnScroll } from "react-animation-on-scroll";
 import { textAlign } from "@mui/system";
-
 export default function TeamCard({ Name, Lead, Team, PrimaryColor }) {
   return (
     <>
