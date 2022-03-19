@@ -1,24 +1,26 @@
 import React from "react";
-import { members } from "../mock/members";
 import { teams } from "../mock/teams";
-import TeamCard from "../Containers/Team/index";
-import TeamLead from "../Containers/ClubLead";
+import { Grid } from "@mui/material";
 import { lead } from "../mock/lead";
+import PageIntro from "../Components/TeamIntro";
+import MemberCard from "../Components/MemberCard";
+import TeamCard from "../Containers/Team";
+import ClubLead from "../Containers/ClubLead";
 
 export default function Teams() {
-  console.log(lead);
+  console.log(teams);
   return (
-    <div className="container teams-page">
-      <div className="head1">
-        <h1 class="display-4 font-weight-bold mb-4" style={{ fontWeight: 10 }}>
-          Our Team
-        </h1>
-      </div>
-      <div className="container">
-        <TeamLead Lead={lead} />
-      </div>
+    <div className=" teams-page">
+      <PageIntro />
+      <ClubLead />
+
       {teams.map((team) => (
-        <TeamCard Name={team.name} Lead={team.lead} Team={team.members} />
+        <TeamCard
+          Name={team.name}
+          Team={team.members}
+          Lead={team.lead}
+          PrimaryColor={team.headerColor}
+        />
       ))}
     </div>
   );

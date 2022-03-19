@@ -1,35 +1,50 @@
-import React from 'react'
-import LeaderCard from '../../Components/LeaderCard'
-import MemberCard from '../../Components/MemberCard'
-import { Row, Col } from 'react-bootstrap';
-const style = {
-    width: 200, height: 300, padding: 5, margin: 10, borderRadius: 350, background: "#221d1d"
-};
-export default  function TeamCard ({Name , Lead , Team}) {
-    return (
-        <>
-            <div className="head1"><h2 class="display-4 font-weight-bold mb-4">{Name}</h2></div>
-            <LeaderCard
-                image={Lead.image}
-                name={Lead.name}
-                role={Lead.role}
-                fb={Lead.role}
-                lkdin={Lead.lkdin}
-                gthb={Lead.gthb}
-                insta={Lead.insta}
-            />
-           
-            {Team.map(member => (
-                 <Row>
-                    <div className="card" style={style}>
-                        <MemberCard
-                            key={member.id}
-                            {...member}
-                        />
-                    </div>
-                </Row>
+import React from "react";
+import { Grid, Typography } from "@mui/material";
+import MemberCard from "../../Components/MemberCard";
+import TeamLeadCard from "../../Components/TeamLeadCard";
+import "./index.css";
+import { AnimationOnScroll } from "react-animation-on-scroll";
+import { textAlign } from "@mui/system";
+
+export default function TeamCard({ Name, Lead, Team, PrimaryColor }) {
+  return (
+    <>
+      <div className="team-card ">
+        <div className="team-header fadeOutOnce">
+          <Typography
+            variant="h4"
+            component="h2"
+            gutterBottom="true"
+            color="white"
+            sx={{
+              fontFamily: "Poppins",
+              fontSize: "3rem",
+              textAlign: "center",
+            }}
+          >
+            {Name}
+          </Typography>
+        </div>
+        <TeamLeadCard
+          name={Lead.name}
+          role={Lead.role}
+          primaryColor={PrimaryColor}
+          image={Lead.image}
+        />
+        <Grid container spacing={1}>
+          {Team &&
+            Team.map((member) => (
+              <Grid item xs={12} md={4} lg={4}>
+                <MemberCard
+                  name={member.name}
+                  role={member.role}
+                  image={member.image}
+                  primaryColor={PrimaryColor}
+                />
+              </Grid>
             ))}
-            
-        </>
-    )
+        </Grid>
+      </div>
+    </>
+  );
 }

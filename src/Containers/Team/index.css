@@ -1,0 +1,8 @@
+.team-header{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.social-icons:hover{
+    transform: scale(1.3);
+}
