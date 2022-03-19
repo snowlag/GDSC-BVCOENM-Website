@@ -4,7 +4,14 @@ import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 
 export default function Header() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top">
+    <Navbar
+      collapseOnSelect
+      expand="lg"
+      bg="dark"
+      variant="dark"
+      fixed="top"
+      style={{ maxWidth: "100vw" }}
+    >
       <div class="container-fluid">
         <Navbar.Brand href="/">
           <Container>
