@@ -64,11 +64,12 @@ export default function index() {
           lg={6}
         >
           <img
-            height="500px"
+            height="600px"
             className="content-header-image-right"
-            width="700px"
-            src="https://dscvit.com/images/landing.svg"
+            width="600px"
+            src="https://gdsc-kau.club/uploaded/2021/09/GDSCboy.png"
             alt="Image"
+            loading="lazy"
           />
         </Grid>
       </Grid>

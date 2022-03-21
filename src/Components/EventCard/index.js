@@ -62,7 +62,12 @@ export default function EventCard(props) {
           <div className="row g-0">
             <div className="col-md-3">
               <div className="poster-container">
-                <img src={posterLink} className="event-image" alt="..." />
+                <img
+                  src={posterLink}
+                  className="event-image"
+                  alt="..."
+                  loading="lazy"
+                />
               </div>
             </div>
             <div className="col-md-9">

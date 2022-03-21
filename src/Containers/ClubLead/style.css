@@ -1,0 +1,129 @@
+.club-lead {
+    
+    margin-bottom: 30px;
+    background-color: #292929;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+    max-width: 700px;
+    padding: 50px 0;
+  }
+  
+  .club-lead .picture {
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    margin-bottom: 50px;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .club-lead .picture::before {
+    content: "";
+    width: 100%;
+    height: 0;
+    border-radius: 50%;
+    background-color: #1369ce;
+    position: absolute;
+    bottom: 135%;
+    right: 0;
+    left: 0;
+    opacity: 0.9;
+    transform: scale(3);
+    transition: all 0.3s linear 0s;
+  }
+  
+  .club-lead:hover .picture::before {
+    height: 100%;
+  }
+  
+  .club-lead .picture::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #db4437;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .club-lead .picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.9s ease 0s;
+  }
+  
+  .club-lead:hover .picture img {
+    box-shadow: 0 0 0 14px #f4b400;
+    transform: scale(0.7);
+  }
+  
+  .club-lead .title {
+    display: block;
+    font-size: 15px;
+    color: #c8c8c8;
+    text-transform: capitalize;
+  }
+  
+  .club-lead .social {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color:#0f9d58 ;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    transition: all 0.5s ease 0s;
+  }
+  
+  .club-lead:hover .social {
+    bottom: 0;
+  }
+  
+  .club-lead .social li {
+    display: inline-block;
+  }
+  
+  .club-lead .social li a {
+    display: block;
+    padding: 10px;
+    font-size: 17px;
+    color: white;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+  }
+  
+  .club-lead .social li a:hover {
+    color: #1369ce;
+    background-color: #f7f5ec;
+  }
+  
+.club-lead .team-content{
+    color:white
+}
+
+.quote{
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.4 !important;
+    font-family: Calibri;
+    color: #bbbaba;
+    font-weight: 500;
+    padding: 50px 0;
+
+}
+
+.quote-by{
+    text-align: right;
+}
+
+.Lead-page-header{
+    text-align: center;
+    font-family: sans-serif;
+    font-style: italic;
+}
